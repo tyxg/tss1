@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>randomColor</title>
+  </head>
+<body>
+<input type="button" name="" value="红色增加"  >
+<input type="button" name="" value="红色减少"  >
+<input type="button" name="" value="绿色增加"  >
+<input type="button" name="" value="绿色减少"  >
+<input type="button" name="" value="蓝色增加"  >
+<input type="button" name="" value="蓝色减少"  >
+<div id="bg1" style="width:200px;height:200px"></div>
+<div id="bg" style="width:200px;height:200px"></div>
+<script type="text/javascript">
+	
+
+			var r = Math.floor(Math.random()*8)*32-1;
+			var g = Math.floor(Math.random()*8)*32-1;
+			var b = Math.floor(Math.random()*8)*32-1;
+			var r1 = 31;
+			var g1 = 31;
+			var b1 = 31;
+			var color = '#'+r.toString(16)+g.toString(16)+b.toString(16);
+			var color1 = '#'+r1.toString(16)+g1.toString(16)+b1.toString(16);
+			document.getElementById("bg").style.backgroundColor = color;
+			document.getElementById("bg1").style.backgroundColor = color1;
+			var redz = document.getElementsByTagName("input")[0];
+			var redj = document.getElementsByTagName("input")[1];
+			var greenz = document.getElementsByTagName("input")[2];
+			var greenj = document.getElementsByTagName("input")[3];
+			var bluez = document.getElementsByTagName("input")[4];
+			var bluej = document.getElementsByTagName("input")[5];
+
+			redz.onclick = function(){
+ 			r1=r1+32;
+ 			var color1 = '#'+r1.toString(16)+g1.toString(16)+b1.toString(16);
+			
+			document.getElementById("bg1").style.backgroundColor = color1;
+  			if (color==color1) {
+  			alert("you are winner");
+  			}
+    		}
+    			redj.onclick = function(){
+ 			r1=r1-32;
+ 			var color1 = '#'+r1.toString(16)+g1.toString(16)+b1.toString(16);
+			
+			document.getElementById("bg1").style.backgroundColor = color1;
+  			if (color==color1) {
+  			alert("you are winner");
+  			}
+    		}
+    			bluez.onclick = function(){
+ 			b1=b1+32;
+ 			var color1 = '#'+r1.toString(16)+g1.toString(16)+b1.toString(16);
+			
+			document.getElementById("bg1").style.backgroundColor = color1;
+  			if (color==color1) {
+  			alert("you are winner");
+  			}
+    		}
+    			bluej.onclick = function(){
+ 			b1=b1-32;
+ 			var color1 = '#'+r1.toString(16)+g1.toString(16)+b1.toString(16);
+			
+			document.getElementById("bg1").style.backgroundColor = color1;
+  			if (color==color1) {
+  			alert("you are winner");
+  			}
+    		}
+    			greenz.onclick = function(){
+ 			g1=g1+32;
+ 			var color1 = '#'+r1.toString(16)+g1.toString(16)+b1.toString(16);
+			
+			document.getElementById("bg1").style.backgroundColor = color1;
+  			if (color==color1) {
+  			alert("you are winner");
+  			}
+    		}
+    			greenj.onclick = function(){
+ 			g1=g1-32;
+ 			var color1 = '#'+r1.toString(16)+g1.toString(16)+b1.toString(16);
+			
+			document.getElementById("bg1").style.backgroundColor = color1;
+  			if (color==color1) {
+  			alert("you are winner");
+  			}
+    		}
+
+
+
+</script>
+ 
+</body>
+</html>
